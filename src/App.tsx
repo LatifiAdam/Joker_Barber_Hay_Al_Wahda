@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState, type FormEvent } from "react";
 import {
   ArrowUpRight,
@@ -15,10 +14,10 @@ import {
   X,
 } from "lucide-react";
 
-import heroImage from "../assets/joker-hero.jpg";
-import fadeImage from "../assets/joker-fade.jpg";
-import beardImage from "../assets/joker-beard.jpg";
-import equipmentImage from "../assets/joker-equipment.jpg";
+import heroImage from "./assets/joker-hero.jpg";
+import fadeImage from "./assets/joker-fade.jpg";
+import beardImage from "./assets/joker-beard.jpg";
+import equipmentImage from "./assets/joker-equipment.jpg";
 
 type Language = "en" | "fr" | "ar";
 
@@ -183,22 +182,6 @@ const copy = {
   },
 } as const;
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Joker Barber Rabat | Barber Shop in Hay Al Wahda" },
-      { name: "description", content: "Book a precision haircut at Joker Barber in Hay Al Wahda, Rabat. Explore our work and professional barber equipment." },
-      { property: "og:title", content: "Joker Barber — Rabat" },
-      { property: "og:description", content: "Precision cuts, beard care and professional barber equipment in Hay Al Wahda, Rabat." },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-  }),
-  component: Index,
-});
-
 function whatsappUrl(message: string) {
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
@@ -212,7 +195,7 @@ function SectionHeading({ title, code }: { title: string; code: string }) {
   );
 }
 
-function Index() {
+export default function App() {
   const [language, setLanguage] = useState<Language>("fr");
   const [menuOpen, setMenuOpen] = useState(false);
   const t = copy[language];
