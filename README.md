@@ -1,31 +1,29 @@
-# Joker Barber — Rabat
+# Welcome to your Lovable project
 
-Site vitrine responsive pour Joker Barber, Hay Al Wahda, Rabat.
+This project was built with [Lovable](https://lovable.dev).
 
-## Stack
+## Build with Lovable
 
-- React 19
-- Vite 8
-- Tailwind CSS 4
-- Lucide React
-- GitHub Pages via GitHub Actions
+Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
+- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
-```bash
-npm install
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+
+```sh
+git clone <this-repository-url>
+cd <repository-name>
+npm i
 npm run dev
 ```
 
-## Production
+## Built with
 
-```bash
-npm run build
-```
-
-La sortie de production se trouve dans `dist/`.
-
-## GitHub Pages
-
-Le workflow `.github/workflows/deploy.yml` exécute l'installation, le build Vite et publie `dist/` sur GitHub Pages.
-Voir également `GITHUB_PAGES.md`.
+- TanStack Start
+- TypeScript
+- React
+- Tailwind CSS
